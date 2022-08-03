@@ -1,0 +1,211 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+
+body{
+    background-color: #131313;
+    min-width: 100vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+
+.cantainer{
+    background: linear-gradient(to top, #D942F5, #A13FEB , #EB4A3F);
+    height: 400px;
+    width: 400px;
+    border-radius: 100%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    overflow: hidden;
+}
+
+.moon{
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color:#e5deeb ;
+    left: 250px;
+    bottom: 180px;
+}
+
+.moon::after{
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color:  #ebb2f5;
+    left: 35px;
+    bottom: 24px;
+}
+.moon::before{
+    content: "";
+    position: absolute;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background-color: #ebb2f5;
+    left: 20px;
+    bottom: 45px;
+}
+/*  montains */
+.montain {
+    position: absolute;
+    bottom: 0;
+    left: 120px;
+    border-top: 0 solid transparent;
+    border-right: 80px solid transparent;
+    border-bottom: 150px solid #A13FEB;
+    border-left: 80px solid transparent ;
+    z-index: 5;
+}
+.montain-shadow {
+    position: absolute;
+    bottom: 0;
+    left: 200px;
+    border-top: 0 solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 150px solid #690cb1;
+    border-left: 0 solid transparent ;
+    z-index: 5;
+    transform-origin: top right;
+    transform: skew(15deg);
+}
+
+.montain-2 {
+    position: absolute;
+    bottom: 0;
+    left: 60px;
+    border-top: 0 solid transparent;
+    border-right: 30px solid transparent;
+    border-bottom: 100px solid #9420ec;
+    border-left: 80px solid transparent ;
+    z-index: 5;
+}
+
+.montain-2-shadow {
+    position: absolute;
+    bottom: 0;
+    left: 140px;
+    border-top: 0 solid transparent;
+    border-right: 30px solid transparent;
+    border-bottom: 100px solid #690cb1;
+    border-left: 0 solid transparent ;
+    z-index: 5;
+    transform-origin: top right;
+    transform: skew(15deg);
+}
+
+.montain-3 {
+    position: absolute;
+    bottom: 0;
+    left: 200px;
+    border-top: 0 solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 80px solid #7910ca;
+    border-left: 80px solid transparent ;
+    z-index: 4;
+}
+
+.montain-3-shadow {
+    position: absolute;
+    bottom: 0;
+    left: 280px;
+    border-top: 0 solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 80px solid #690cb1;
+    border-left: 0 solid transparent ;
+    z-index: 4;
+    transform-origin: top right;
+    transform: skew(15deg);
+}
+
+ /*  clouds */
+ .cloud {
+    width: 50px;
+    height: 20px;
+    background-color: #f0e9e5;
+    border-radius: 50px;
+    position: relative;
+    margin: 120px auto 20px;
+ }
+
+ .cloud::after, .cloud::before {
+    content: "";
+    position: absolute;
+    background: #f0e9e5;
+    z-index: 1;
+ }
+ .cloud::after {
+    width: 20px;
+    height: 20px;
+    top: -11px;
+    left: 23px;
+    border-radius: 100px;
+ }
+
+ .cloud::before{
+    width: 20px;
+    height: 20px;
+    top: -9px;
+    right: 21px;
+    border-radius: 200px;
+
+ }
+
+ .cloud-1 {
+    left: -100px;
+    top: 200px;
+    animation: left 2s linear infinite alternate;
+    will-change: transform;
+ }
+
+ .cloud-2 {
+    left: -150px;
+    animation: left 2s linear infinite alternate;
+    will-change: transform;
+ }
+
+ .cloud-3 {
+    left: 100px;
+    bottom: 90px;
+    animation: left 2s linear infinite alternate;
+    will-change: transform;
+ }
+
+ .cloud-4{
+    left: 170px;
+    bottom: 280px;
+    animation: left 2s linear infinite alternate;
+    will-change: transform;
+ }
+
+ .cloud-5 {
+    left: 30px;
+    bottom: 420px;
+    animation: left 2s linear infinite alternate;
+    will-change: transform;
+ }
+
+ @keyframes left {
+    0%{
+        transform: translateX(-50%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+ }
+
+ 
